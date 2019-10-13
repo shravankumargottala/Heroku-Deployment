@@ -13,8 +13,7 @@ def home():
        'Core i5', 'Core i3 8130U', 'Core i5 6200U', 'Core i3-5005U',
        'Core i7', 'Core i5 8300H']
    processor_brand = ['Intel']
-   os_sys = ['Windows 10, Home', 'DOS', 'Windows 10',
-       'Windows 10 Home High End', 'Linux']
+   os_sys = ['Windows 10, Home', 'DOS', 'Windows 10', 'Linux']
    mem_tech = ['DDR4', 'DDR3', 'DDR4, Optane', 'DDR3L']
    return render_template('index.html',laptop_name=laptop_name,ram_size=ram_size,processor_type=processor_type,processor_brand=processor_brand,os_sys=os_sys,mem_tech=mem_tech)
 
@@ -31,8 +30,7 @@ def predict():
     
     processor_brand_replace_values = {'Intel':0}
     
-    os_rplace_values = {'Windows 10':0, 'Windows 10, Home':1, 
-           'Windows 10, Home High End':2, 'DOS':3,'Linux':4}
+    os_rplace_values = {'Windows 10':0, 'Windows 10, Home':1, 'DOS':2,'Linux':3}
     
     mem_tech_replace_values = {'DDR3':0,'DDR3L':1,'DDR4':2, 'DDR4, Optane':3}   
     

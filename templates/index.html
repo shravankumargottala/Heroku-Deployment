@@ -4,20 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <title>ML Laptop Price Prediction API</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="desi.css">
+
 </head>
 
 <body>
- <div class="login">
+
+ <div class="container form-group col-md-6">
         <h1>Predict Laptop Price Analysis</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-      <div>
+      <div class="form-group">
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable for="inputlaptopname">Laptop Name :</lable>
         <select name= "laptop_name" method="GET" action="/">
             {% for lp_nme in laptop_name %}
@@ -26,11 +28,11 @@
          </select>
       </div>
       
-      <div>
+      <div class="form-group">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Laptop Weight :</lable>
-        <input type="text" name="lp_weight" placeholder="Laptop Weight" required="required" />
+        <input type="text" id ="ex2" name="lp_weight" placeholder="eg: 1.85" required="required" />
       </div>
-        <div>
+        <div class="form-group">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Ram Size :</lable>
          <select name= "ram_size" method="GET" action="/">
             {% for rs in ram_size %}
@@ -38,15 +40,15 @@
             {% endfor %}
          </select>
         </div>
-        <div>
+        <div class="form-group">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Hard Drive Size :</lable>
-        <input type="text" name="hd_size" placeholder="Hard Drive Size" required="required" />
+        <input type="text" name="hd_size" placeholder="eg: 1024, 512 " required="required" />
         </div>
-        <div>
+        <div class="form-group">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Processor Speed :</lable>
-        <input type="text" name="procc_speed" placeholder="Processor Speed" required="required" />
+        <input type="text" name="procc_speed" placeholder="eg: 2.4 " required="required" />
         </div>
-        <div>
+        <div class="form-group">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Processor Type :</lable>
          <select name= "processor_type" method="GET" action="/">
             {% for pt in processor_type %}
@@ -54,11 +56,11 @@
             {% endfor %}
          </select>
         </div>
-        <div>
+        <div class="form-group">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Screen Size :</lable>
-        <input type="text" name="scr_size" placeholder="Screen Size" required="required" />
+        <input type="text" name="scr_size" placeholder="eg: 14.0 or 15.6 " required="required" />
         </div>
-        <div>
+        <div class="form-group">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Processor Brand :</lable>
         <select name= "processor_brand" method="GET" action="/">
             {% for pb in processor_brand %}
@@ -66,7 +68,7 @@
             {% endfor %}
          </select>
         </div>
-        <div>
+        <div class="form-group">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Operating System :</lable>
         <select name= "oper_sys" method="GET" action="/">
             {% for os in os_sys %}
@@ -74,7 +76,7 @@
             {% endfor %}
          </select>
          </div>
-         <div>
+         <div class="form-group">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Memory Technology :</lable>
          <select name= "memory_tech" method="GET" action="/">
             {% for mt in mem_tech %}
@@ -82,7 +84,7 @@
             {% endfor %}
          </select>
          </div>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary">Predict</button>
     </form>
 
    <br>
