@@ -23,7 +23,7 @@
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
       <div class="form-group">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable for="inputlaptopname">Laptop Name :</lable>
+<lable for="inputlaptopname">Laptop Name :</lable>
         <select name= "laptop_name" method="GET" action="/">
             {% for lp_nme in laptop_name %}
                <option value= "{{lp_nme}}" SELECTED>{{lp_nme}}</option>"
@@ -32,11 +32,11 @@
       </div>
       
       <div class="form-group">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Laptop Weight :</lable>
+        <lable>Laptop Weight :</lable>
         <input type="text" id ="ex2" name="lp_weight" placeholder="eg: 1.85" required="required" />
       </div>
         <div class="form-group">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Ram Size :</lable>
+        <lable>Ram Size :</lable>
          <select name= "ram_size" method="GET" action="/">
             {% for rs in ram_size %}
                <option value= "{{rs}}" SELECTED>{{rs}}</option>"
@@ -44,15 +44,15 @@
          </select>
         </div>
         <div class="form-group">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Hard Drive Size :</lable>
+        &<lable>Hard Drive Size :</lable>
         <input type="text" name="hd_size" placeholder="eg: 1024, 512 " required="required" />
         </div>
         <div class="form-group">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Processor Speed :</lable>
+        <lable>Processor Speed :</lable>
         <input type="text" name="procc_speed" placeholder="eg: 2.4 " required="required" />
         </div>
         <div class="form-group">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Processor Type :</lable>
+        <lable>Processor Type :</lable>
          <select name= "processor_type" method="GET" action="/">
             {% for pt in processor_type %}
                <option value= "{{pt}}" SELECTED>{{pt}}</option>"
@@ -60,11 +60,11 @@
          </select>
         </div>
         <div class="form-group">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Screen Size :</lable>
+        lable>Screen Size :</lable>
         <input type="text" name="scr_size" placeholder="eg: 14.0 or 15.6 " required="required" />
         </div>
         <div class="form-group">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Processor Brand :</lable>
+        lable>Processor Brand :</lable>
         <select name= "processor_brand" method="GET" action="/">
             {% for pb in processor_brand %}
                <option value= "{{pb}}" SELECTED>{{pb}}</option>"
@@ -72,7 +72,7 @@
          </select>
         </div>
         <div class="form-group">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Operating System :</lable>
+        <lable>Operating System :</lable>
         <select name= "oper_sys" method="GET" action="/">
             {% for os in os_sys %}
                <option value= "{{os}}" SELECTED>{{os}}</option>"
@@ -80,14 +80,14 @@
          </select>
          </div>
          <div class="form-group">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>Memory Technology :</lable>
+        <lable>Memory Technology :</lable>
          <select name= "memory_tech" method="GET" action="/">
             {% for mt in mem_tech %}
                <option value= "{{mt}}" SELECTED>{{mt}}</option>"
             {% endfor %}
          </select>
          </div>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary">Predict</button>
+        <button type="submit" class="btn btn-primary">Predict</button>
     </form>
 
    <br>
