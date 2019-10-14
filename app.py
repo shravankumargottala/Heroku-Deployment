@@ -55,8 +55,8 @@ def predict():
        prediction = model.predict(final_features)
 
        output = round(prediction[0], 2)
-
-       return render_template('result.html', prediction_text='Laptop Price should be INR {}'.format(output))
+       
+       return render_template('result.html', prediction_text='Laptop Price should be Rs. {}/-'.format(output))
    
 
 if __name__ == "__main__":
