@@ -23,7 +23,7 @@
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
       <div class="form-group">
-<lable for="inputlaptopname">Laptop Name :</lable>
+<lable for="inputlaptopname">Laptop Brand :</lable>
         <select name= "laptop_name" method="GET" action="/">
             {% for lp_nme in laptop_name %}
                <option value= "{{lp_nme}}" SELECTED>{{lp_nme}}</option>"
