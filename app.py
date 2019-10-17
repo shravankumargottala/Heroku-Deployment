@@ -13,7 +13,7 @@ def home():
        'Core i3 8130U', 'Core i3-5005U', 'Core i5 7200U', 'Core i5 6200U',
        'Core i7', 'Core i5 8300H', 'Core i7 8750H', 'Core i5']
    processor_brand = ['Intel']
-   os_sys = ['Windows 10, Home', 'DOS', 'Linux', 'Windows 10']
+   os_sys = ['Windows 10 Home', 'DOS', 'Linux', 'Windows 10']
    mem_tech = ['DDR3', 'DDR3L', 'DDR4 SDRAM', 'DDR DRAM', 'GDDR4',
        'DDR SDRAM', 'GDDR5','DDR4']
    return render_template('index.html',laptop_name=laptop_name,ram_size=ram_size,processor_type=processor_type,processor_brand=processor_brand,os_sys=os_sys,mem_tech=mem_tech)
