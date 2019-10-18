@@ -58,7 +58,7 @@ def predict():
 
        output = round(np.expm1(prediction[0]),2)
        
-       return render_template('result.html', prediction_text='Laptop Price should be Rs. {}/-'.format(output))
+       return render_template('result.html', prediction_text='Laptop Price should be ₹ {}/-'.format(output))
    
 
 if __name__ == "__main__":
