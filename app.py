@@ -58,7 +58,7 @@ def predict():
        output = round(np.expm1(prediction[0]),2)
 	   
 	   
-       return render_template('result.html', lop_nm='Laptop Brand name : {}'.format(lp_nm),proc_type='Process Type : {}'.format(proc_type),proc_brand='Process Name : {}'.format(proc_brand),os_name='Operating System : {}'.format(os_name),mem_tech='System Memory Technology : {}'.format(mem_tech),screen_sz='Laptop Screen Size : {} Inches'.format(screen_sz),lp_weight='Laptop Weight : {} Kg'.format(lp_weight),hd_size='Hard Disk Size : {} GB'.format(hd_size),procc_speed='Processing Speed : {} GHzs'.format(procc_speed),ram_size='Ram Size : {} GB'.format(ram_size),prediction_text='{} Laptop Price for the above Specifications should be ₹ {}/-'.format(lp_nm,output))
+       return render_template('result.html', lop_nm='Laptop Brand name : {}'.format(lp_nm),proc_type='Process Type : {}'.format(proc_type),proc_brand='Process Name : {}'.format(proc_brand),os_name='Operating System : {}'.format(os_name),mem_tech='System Memory Technology : {}'.format(mem_tech),screen_sz='Laptop Screen Size : {} Inches'.format(screen_sz),lp_weight='Laptop Weight : {} Kg'.format(lp_weight),hd_size='Hard Disk Size : {} GB'.format(hd_size),procc_speed='Processing Speed : {} GHzs'.format(procc_speed),ram_size='Ram Size : {} GB'.format(ram_size),prediction_text='{} Laptop Price for the above Specifications will be ₹ {}/-'.format(lp_nm,output))
    
 
 if __name__ == "__main__":
