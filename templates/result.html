@@ -14,7 +14,19 @@
    <body>
     <div class="container">
       <div class="jumbotron" style="background-color: #ad87c7;">
+		<h4>{{ lp_nm }} </h4>
+		<h4>{{ proc_type }} </h4>
+		<h4>{{ proc_brand }} </h4>
+		<h4>{{ os_name }} </h4>
+		<h4>{{ mem_tech }} </h4>
+		<h4>{{ screen_sz }} </h4>
+		<h4>{{ lp_weight }} </h4>
+		<h4>{{ hd_size }} </h4>
+		<h4>{{ procc_speed }} </h4>
+		<h4>{{ ram_size }} </h4>
+		<br>
         <h2>{{ prediction_text }} </h2>
+		<br>
         <form action="{{ url_for('home')}}"method="post">
                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary">Back To Home</button>
         </form>
